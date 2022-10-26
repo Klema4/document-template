@@ -1,0 +1,234 @@
+:root {
+    --white: #fff;
+    --black: #000;
+
+    /* Google-like Material You Colors, choose the color that most of the time represents your brand! 
+       You can just remove comments on the color you choose, nothing hard... */
+
+    /* BLUE THEME */
+    --brand-color: #4d67ff;
+    --brand-color-darker: #3c51c9;
+
+    /* PURPLE THEME */
+    /*--brand-color: #744dff;
+    --brand-color-darker: #6d3cc9;*/
+
+    /* PINK THEME */
+    /*--brand-color: #e14dff;
+    --brand-color-darker: #a730a7;*/
+
+    /* RED THEME */
+    /*--brand-color: #ff4d65;
+    --brand-color-darker: #ca3b53;*/
+
+    /* ORANGE THEME */
+    /*--brand-color: #ff854d;
+    --brand-color-darker: #ca633b;*/
+
+    /* YELLOW THEME */
+    /*--brand-color: #ffb24d;
+    --brand-color-darker: #ca913b;*/
+
+    /* LIME THEME */
+    /*--brand-color: #759e28;
+    --brand-color-darker: #668324;*/
+
+    /* GREEN THEME */
+    /*--brand-color: #2ead4e;
+    --brand-color-darker: #289440;*/
+
+    /* CYAN THEME */
+    /*--brand-color: #279397;
+    --brand-color-darker: #1e7477;*/
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #101014;
+        --dash: #2c2c33;
+        --headers: #f1f1f8;
+        --button: #fff;
+        --button-text: #000;
+        --content-text: #a1a1b6;
+        /* Alternate color if you want to use different color for highlights */
+        --highlight: #6260e0;
+
+        /* Google-like Material You Colors, choose the color that most of the time represents your brand! 
+           You can just remove comments on the color you choose, nothing hard... */
+
+        /* BLUE THEME */
+        --brand-color-toggle: #17171a;
+
+        /* PURPLE THEME */
+        /*--brand-color-toggle: #141316;*/
+
+        /* PURPLE THEME */
+        /*--brand-color-toggle: #151316;*/
+
+        /* RED THEME */
+        /*--brand-color-toggle: #161313;*/
+
+        /* ORANGE THEME */
+        /*--brand-color-toggle: #161413;*/
+
+        /* YELLOW THEME */
+        /*--brand-color-toggle: #161513;*/
+
+        /* LIME THEME */
+        /*--brand-color-toggle: #151613;*/
+
+        /* GREEN THEME */
+        /*--brand-color-toggle: #131614;*/
+
+        /* CYAN THEME */
+        /*--brand-color-toggle: #131616;*/
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --background: #eaeaf7;
+        --dash: #dcdde7;
+        --headers: #222225;
+        --button: #292933;
+        --button-text: #f6f7fd;
+        --content-text: #595969;
+        /* Alternate color if you want to use different color for highlights */
+        --highlight: #6260e0;
+
+        /* Google-like Material You Colors, choose the color that most of the time represents your brand! 
+           You can just remove comments on the color you choose, nothing hard... */
+
+        /* BLUE THEME */
+        --brand-color-toggle: #e9e9f5;
+
+        /* PURPLE THEME */
+        /*--brand-color-toggle: #edebf3;*/
+
+        /* PURPLE THEME */
+        /*--brand-color-toggle: #f2ebf3;*/
+        
+        /* RED THEME */
+        /*--brand-color-toggle: #f3ebec;*/
+
+        /* ORANGE THEME */
+        /*--brand-color-toggle: #f3eeeb;*/
+
+        /* YELLOW THEME */
+        /*--brand-color-toggle: #f3f1eb;*/
+
+        /* LIME THEME */
+        /*--brand-color-toggle: #f1f3eb;*/
+
+        /* GREEN THEME */
+        /*--brand-color-toggle: #ebf3ed;*/
+
+        /* CYAN THEME */
+        /*--brand-color-toggle: #ebf3f3;*/
+    }
+}
+
+body {
+    background-color: var(--brand-color-toggle);
+    font-family: 'Outfit', sans-serif;
+}
+
+.content {
+    border-left: 2px dashed var(--dash);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--headers);
+    font-weight: 700 !important;
+}
+
+img {
+    border-radius: 4px;
+}
+
+h1 {
+    letter-spacing: -2px;
+}
+
+p, li {
+    color: var(--content-text);
+}
+
+a {
+    color: var(--brand-color);
+}
+
+a:hover {
+    color: var(--brand-color-darker);
+}
+
+.btn {
+    border-radius: 3px;
+    border-width: 2px;
+    padding: 8px 16px;
+    transition: background-color 0.3s cubic-bezier(0.075, 0.82, 0.165, 1), border 0.3s cubic-bezier(0.075, 0.82, 0.165, 1), transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.btn-primary {
+    background-color: var(--brand-color);
+    border-color: var(--brand-color);
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    background-color: var(--brand-color-darker);
+    border-color: var(--brand-color-darker);
+}
+
+.btn-outline-light {
+    border: 1px solid var(--button);
+    color: var(--button);
+}
+
+.btn-outline-light:hover, .btn-outline-light:focus, .btn-outline-light:active {
+    background-color: var(--button);
+    border: 1px solid var(--button);
+    color: var(--button-text);
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+}
+
+mark {
+    background-color: var(--brand-color);
+    /* Alternate color if you want to use different color for highlights */
+    /* background-color: var(--highlight); */
+    color: var(--white);
+    border-radius: 3px;
+    padding: 4px 8px;
+}
+
+::-moz-selection {
+    background: var(--brand-color);
+    color: var(--white);
+}
+
+::selection {
+    background: var(--brand-color);
+    color: var(--white);
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dash);
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: var(--brand-color);
+    border-radius: 99px;
+    border: 3px solid var(--dash);
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--brand-color-darker);
+}
